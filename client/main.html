@@ -1,0 +1,20 @@
+<head>
+  <title>Recipe Collector</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    const checkElement = async selector => {
+      while ( document.querySelector(selector) === null) {
+        await new Promise( resolve =>  requestAnimationFrame(resolve) )
+      }
+      return document.querySelector(selector); 
+    };
+    checkElement('.new-player').then((selector) => {      
+      selector.querySelector(".bp3-label").innerHTML = "Prolific ID";      
+      selector.querySelector(".bp3-form-helper-text").innerHTML = "Enter your Prolific ID";
+      selector.querySelector(".bp3-input").setAttribute("minlength", 8);
+    });
+  </script>
+</body>
