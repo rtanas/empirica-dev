@@ -42,6 +42,4 @@ Go to `http://localhost:3000/` and enjoy! If you don't have 3 friends to play wi
 
 ![game][game-img]
 
-[game-img]: ./readme_screenshots/game.png
-
 
