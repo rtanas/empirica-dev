@@ -7,7 +7,7 @@ You and a group of friends can play with this experiment as we ran it by followi
 git clone https://github.com/amaatouq/room-assignment-csop
 ```
 
-2. Go into the folder with `cd room-assignment-csop`
+2. Go into the folder with `cd empirica-dev`
 3. Install the required dependencies `meteor npm install`
 4. Edit the `admin` password in the settings file `local.json` to something you like.
 5. Run the local instance with `meteor --settings local.json`
@@ -23,7 +23,7 @@ First, you have to enter the Configuration mode instead of the Monitoring model 
 
 [config-mode-image]: ./readme_screenshots/configuration_mode.png
 
-This will allow you to configure the experiment: Factors, Lobby, and Treatments. Now, you have the option to create your own configuration (see below) or load an example configuration by clicking on `import` and then choosing the file `./example-config.yaml`.
+This will allow you to configure the experiment: Factors, Lobby, and Treatments. Now, you have the option to create your own configuration (see below) or load an example configuration by clicking on `import` and then choosing the file `./prod-config.yaml`.
 Loading the example configurations will choose some example values for the factors (i.e., independent variables), lobby configuration, and few treatments.
 
 Now, you can go back to the Monitoring mode:
