@@ -4,7 +4,7 @@ You and a group of friends can play with this experiment as we ran it by followi
 1. [Download](https://github.com/amaatouq/room-assignment.git) the repository (and unzip). Alternatively, from terminal just run:
 
 ```ssh
-git clone https://github.com/amaatouq/room-assignment-csop
+git clone https://github.com/rtanas/empirica-dev.git
 ```
 
 2. Go into the folder with `cd empirica-dev`
