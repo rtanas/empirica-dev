@@ -4,17 +4,52 @@ import ChatLog from "./ChatLog";
 import Timer from "./Timer.jsx";
 
 export default class SocialInteractions extends React.Component {
+  renderStatus(type) {
+    const { player } = this.props;
+    let statusValue = "";
+    if (player.online == true) {
+      if(player.idle == false) {
+        statusValue = "online";
+      } else {
+        statusValue = "idle";
+      }
+    }else {
+      statusValue = "offline";
+    }
+    
+    return (
+      <div className="wrapper-status-value">
+        { type === 'color'? (
+          <div className={`status-color ${statusValue}`}></div>
+        ) : (
+          <span className={`status-value ${statusValue}`}>{statusValue}</span>
+        )}
+        
+      </div>
+    );
+  }
+
   renderPlayer(player, self = false) {
     return (
       <div className="player" key={player._id}>
-        <span className="image">
-          
-          <img src={player.get("avatar")} />
-        </span>
+        <div className="wrapper-avatar">
+          <span className="image">
+            <img src={player.get("avatar")} />
+            {this.renderStatus('color')}
+          </span>
+          {this.renderStatus('value')}
+        </div>
         {/* <span className="name" style={{ color: player.get("nameColor") }}> */}
-        <span className="name" style={{ color: player.get("nameColor") }}>          
-          {self ? "You" : player.get("name")}
-        </span>
+        <div className="wrapper-name">
+          <span className="name" style={{ color: player.get("nameColor") }}>          
+            {self ? "You" : player.get("name")}
+          </span>
+          <div className="star-rating">
+          </div>
+          <span>
+            Typically replies within 1 min
+          </span>
+        </div>
       </div>
     );
   }

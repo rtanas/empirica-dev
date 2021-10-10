@@ -16,5 +16,14 @@
       selector.querySelector(".bp3-form-helper-text").innerHTML = "Enter your Prolific ID";
       selector.querySelector(".bp3-input").setAttribute("minlength", 8);
     });
+    checkElement('.game-lobby').then((selector) => {      
+      let headings = selector.getElementsByClassName("bp3-heading");
+      if (headings.length > 0) {
+        if (headings[0].innerText.indexOf("Game loading") != -1) {
+          headings[0].innerText = "Task loading...";
+          headings[0].nextSibling.innerText = "Your task will be starting shortly, get ready!";
+        }
+      }
+    });
   </script>
 </body>
